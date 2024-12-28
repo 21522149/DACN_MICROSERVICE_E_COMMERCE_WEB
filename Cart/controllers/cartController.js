@@ -44,7 +44,7 @@ const deleteCartProduct = async (req, res) => {
 
 const checkout = async (req, res) => {
     const cartProducts = await CartModel.deleteMany({ UserId: req.user.id });
-    // console.log(cartProducts);
+    console.log(cartProducts);
     let total = 0;
     res.json({cartProducts});
 
